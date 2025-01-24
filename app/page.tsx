@@ -13,7 +13,6 @@ export default function Home() {
         {icon: <Info color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "about", label: "Informations"},
         {icon: <GraduationCap color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "school", label: "Educations"},
         {icon: <Hammer color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "skills", label: "Skills"},
-        {icon: <Contact color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "contact", label: "Contact"},
     ]
 
 

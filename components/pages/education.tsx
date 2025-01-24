@@ -2,8 +2,6 @@ import { Badge } from '../ui/badge'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Separator } from "../ui/separator"
-import { Button } from '../ui/button'
-
 
 export default function EducationPage() {
 

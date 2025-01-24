@@ -12,7 +12,7 @@ export default function AboutPage() {
     ]
 
     return (
-        <div className='grid lg:grid-cols-2 w-full h-screen animate-pageSpawn overflow-auto overflow-x-hidden gap-5'>
+        <div className='grid lg:grid-cols-2 w-full h-screen animate-pageSpawn overflow-auto overflow-x-hidden b gap-5'>
 
             <div className='flex justify-center items-center flex-col gap-1 w-full'>
                 <h6 className='text-[rgba(179,179,179,1)] text-md font-normal'>Developper full stack & Studient Cybersecurity</h6>
