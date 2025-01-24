@@ -2,6 +2,7 @@ import { Separator } from "../ui/separator"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Card, CardContent, CardDescription } from '@/components/ui/card'
 import { Progress } from "@/components/ui/progress"
+import Image from "next/image"
 
 
 export default function SkillPage() {
@@ -37,7 +38,7 @@ export default function SkillPage() {
                             <CarouselItem key={index} className="h-full w-full ">
                                 <Card className="flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md p-2">
                                     <CardContent className="flex items-center justify-center">
-                                        <img src={`${item.img}`} alt={item.name} className="w-1/2"/>
+                                        <Image src={item.img} alt={item.name} width={`${100}`} height={100} />
                                     </CardContent>
                                     <CardDescription className="flex flex-col justify-center items-center gap-2 w-full">
                                         <p className="text-white font-semibold text-lg text-center">{item.name}</p>
@@ -63,7 +64,7 @@ export default function SkillPage() {
                             <CarouselItem key={index} className="h-full w-full ">
                                 <Card className="flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md p-2">
                                     <CardContent className="flex items-center justify-center">
-                                        <img src={`${item.img}`} alt={item.name} className="w-1/2"/>
+                                        <Image src={item.img} alt={item.name} width={`${100}`} height={100} />
                                     </CardContent>
                                     <CardDescription className="flex flex-col justify-center items-center gap-2 w-full">
                                         <p className="text-white font-semibold text-lg text-center">{item.name}</p>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Linkedin, Github, Instagram,  } from 'lucide-react'
-
+import Image from 'next/image'
 
 
 export default function AboutPage() {
@@ -31,7 +31,8 @@ export default function AboutPage() {
             </div>
 
             <div className='flex justify-center items-center flex-col'>
-                <img className='rounded-full border border-blue-400' src='/pictures.png'/>
+                <Image src="/pictures.png" alt='avatar' className='rounded-full border border-blue-400' height={500} width={500} priority={true}/>
+                {/* <img className='rounded-full border border-blue-400' src='/pictures.png'/> */}
             </div>
 
             
