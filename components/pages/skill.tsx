@@ -1,8 +1,7 @@
 import { Separator } from "../ui/separator"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription } from '@/components/ui/card'
 import { Progress } from "@/components/ui/progress"
-import { log } from "console"
 
 
 export default function SkillPage() {

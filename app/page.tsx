@@ -2,7 +2,7 @@
 
 import Container from "@/components/Container";
 import TabBar from "@/components/TabBar"
-import { House, Info, GraduationCap, Hammer, Contact, PanelRightClose,  PanelRightOpen} from "lucide-react";
+import { Info, GraduationCap, Hammer } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
