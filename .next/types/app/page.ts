@@ -1,4 +1,4 @@
-// File: C:\Users\fores\OneDrive\Documents\Portfolio\app\page.tsx
+// File: /Users/mathieuforest/Documents/Python/GCS_PythonAlgo/Portfolio-Apple-Vision/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

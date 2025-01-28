@@ -1,4 +1,4 @@
-// File: C:\Users\fores\OneDrive\Documents\Portfolio\app\layout.tsx
+// File: /Users/mathieuforest/Documents/Python/GCS_PythonAlgo/Portfolio-Apple-Vision/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

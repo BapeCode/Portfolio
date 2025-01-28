@@ -6,9 +6,9 @@ import Image from 'next/image'
 export default function AboutPage() {
 
     const SocialsNetwork = [
-        {icon: <Linkedin color="#FFFFFF" size="27px" strokeWidth="1.5px" />, name: "linkedin", label: "Linkedin"},
-        {icon: <Github color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "github", label: "Github"},
-        {icon: <Instagram color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "instagram", label: "Instagram"},
+        {icon: <Linkedin color="#FFFFFF" size="27px" strokeWidth="1.5px" />, name: "linkedin", label: "Linkedin", link: "https://www.linkedin.com/in/mathieu-forest/"},
+        {icon: <Github color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "github", label: "Github", link: 'https://github.com/BapeCode'},
+        {icon: <Instagram color="#FFFFFF" size="27px" strokeWidth="1.5px"/>, name: "instagram", label: "Instagram", link: 'https://www.instagram.com/mathieu___frt'},
     ]
 
     return (
@@ -22,8 +22,8 @@ export default function AboutPage() {
                 <div className='flex items-center justify-center gap-4 flex-row mt-5 overflow-hidden'>
                     {SocialsNetwork.map((item, index) => {
                         return (
-                            <div key={index} className='p-3 hover:bg-hovered rounded-full duration-300 transition-all cursor-pointer border border-apple'>
-                                <a href=''>{item.icon}</a>
+                            <div key={index} className='p-3 hover:bg-hovered rounded-full duration-300 transition-all cursor-pointer border border-apple' >
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" >{item.icon}</a>
                             </div>
                         )
                     })}
@@ -31,7 +31,7 @@ export default function AboutPage() {
             </div>
 
             <div className='flex justify-center items-center flex-col'>
-                <Image src="/pictures.png" alt='avatar' className='rounded-full border border-blue-400' height={500} width={500} priority={true}/>
+                <Image src="/pictures.png" alt='avatar' className='rounded-full border border-blue-400 sm:w-[10wh]' height={400} width={400} priority={true}/>
                 {/* <img className='rounded-full border border-blue-400' src='/pictures.png'/> */}
             </div>
 
