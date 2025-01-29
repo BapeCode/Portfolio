@@ -34,7 +34,7 @@ export default function AboutPage() {
                             )
                         })}
                     </div>
-                    <Button onClick={() => console.log("dwl")} variant="apple" size="apple" className='flex sm:hidden'>Download CV</Button>
+                    <Button onClick={handleDownloadCV} variant="apple" size="apple" className='flex sm:hidden'>Download CV</Button>
                 </div>
             </div>
 
