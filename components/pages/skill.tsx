@@ -1,9 +1,6 @@
-import { Separator } from "../ui/separator"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Card, CardContent, CardDescription } from '@/components/ui/card'
-import { Progress } from "@/components/ui/progress"
-import Image from "next/image"
-
+import DesktopSkills from "../skillsUtils/DesktopSkills"
+import { useIsMobile } from "@/hooks/use-mobile"
+import MobileSkills from "../skillsUtils/MobileSkills"
 
 export default function SkillPage() {
 
@@ -26,59 +23,19 @@ export default function SkillPage() {
     ]
 
     return (
-        <div className='grid lg:grid-cols-2 justify-center w-full  h-screen animate-pageSpawn overflow-auto overflow-x-hidden p-10 gap-2'>
+        <div className='grid lg:grid-cols-2 justify-center w-full h-screen animate-pageSpawn overflow-auto overflow-x-hidden p-10 gap-2'>
 
-            <div className="flex justify-center items-center flex-col gap-3">
-                <h1 className="text-white font-semibold text-3xl">Technology</h1>
-                <Separator className="w-2/3"/>
-
-                <Carousel className="w-1/2 sm:w-2/3 lg:w-full max-w-xs">
-                    <CarouselContent>
-                        {technology.map((item, index) => (
-                            <CarouselItem key={index} className="h-full w-full ">
-                                <Card className="flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md p-2">
-                                    <CardContent className="flex items-center justify-center">
-                                        <Image src={item.img} alt={item.name} width={`${100}`} height={100} />
-                                    </CardContent>
-                                    <CardDescription className="flex flex-col justify-center items-center gap-2 w-full">
-                                        <p className="text-white font-semibold text-lg text-center">{item.name}</p>
-                                        <Progress className="w-full" value={item.value} />
-                                    </CardDescription>
-                                </Card>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                        <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
-
-            </div>
-
-            <div className="flex justify-center items-center flex-col gap-3">
-                <h1 className="text-white font-semibold text-3xl">Tools</h1>
-                <Separator className="w-2/3"/>
-
-                <Carousel className="w-1/2 sm:w-2/3 lg:w-full max-w-xs">
-                    <CarouselContent>
-                        {logiciel.map((item, index) => (
-                            <CarouselItem key={index} className="h-full w-full ">
-                                <Card className="flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md p-2">
-                                    <CardContent className="flex items-center justify-center">
-                                        <Image src={item.img} alt={item.name} width={`${100}`} height={100} />
-                                    </CardContent>
-                                    <CardDescription className="flex flex-col justify-center items-center gap-2 w-full">
-                                        <p className="text-white font-semibold text-lg text-center">{item.name}</p>
-                                        <Progress className="w-full" value={item.value} />
-                                    </CardDescription>
-                                </Card>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                        <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
-
-            </div>
+            {useIsMobile() ? (
+                <>
+                    <MobileSkills title="Technology" data={technology} />
+                    <MobileSkills title="Tools" data={logiciel} />
+                </>
+            ): (
+                <>
+                    <DesktopSkills title="Technology" data={technology} />
+                    <DesktopSkills title="Tools" data={logiciel} />
+                </>
+            )}
 
         </div>
     )

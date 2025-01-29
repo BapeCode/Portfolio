@@ -1,7 +1,6 @@
-import { Badge } from '../ui/badge'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Separator } from "../ui/separator"
+import DesktopEducation from '../educationUtils/DesktopEducation'
+import { useIsMobile } from '@/hooks/use-mobile'
+import MobileEducations from '../educationUtils/MobileEducations'
 
 export default function EducationPage() {
 
@@ -19,79 +18,19 @@ export default function EducationPage() {
     ]
 
     return (
-        <div className="grid lg:grid-cols-2 justify-center w-full h-full animate-pageSpawn overflow-auto overflow-x-hidden p-5 gap-4 sm:p-10 min-w-screen">
+        <div className="grid lg:grid-cols-2 justify-center w-full h-full animate-pageSpawn overflow-auto overflow-x-hidden p-5 gap-4 sm:p-10">
 
-            <div className="flex justify-start items-center flex-col gap-3 h-full w-full">
-                <h1 className="text-white font-semibold text-3xl">Education</h1>
-                <Separator className="w-full"/>
-
-                <Carousel className="w-2/3 sm:w-2/3 lg:w-full max-w-xs">
-                    <CarouselContent>
-                        {education.map((item, index) => (
-                            <CarouselItem key={index} className='h-full w-full'>
-                                <div className="p-1 flex justify-between items-center h-full">
-                                    <Card className='flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md'>
-                                        <CardHeader className='w-full'>
-                                            <CardTitle className="text-blue-100 font-bold">{item.date}</CardTitle>
-                                            <CardDescription className="text-white text-md">{item.label}</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-white font-semibold text-sm">{item.description}</p>
-                                        </CardContent>
-                                        <CardFooter>
-                                            <div className="flex justify-start items-center flex-wrap gap-1 w-full">
-                                                {item.skills && item.skills.map((skill, index) => {
-                                                    return (
-                                                        <Badge key={index} variant="outline">{skill}</Badge>
-                                                    )
-                                                })}
-                                            </div>
-                                        </CardFooter>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className='cursor-pointer bg-white hidden lg:flex' />
-                    <CarouselNext className='cursor-pointer bg-white hidden lg:flex' />
-                </Carousel>
-            </div>
-
-            <div className="flex justify-start items-center flex-col gap-3 h-full w-full">
-                <h1 className="text-white font-semibold text-3xl">Experiences</h1>
-                <Separator className="w-full"/>
-
-                <Carousel className="w-2/3 sm:w-2/3 lg:w-full max-w-xs">
-                    <CarouselContent>
-                        {experiences.map((item, index) => (
-                            <CarouselItem key={index} className='h-full w-full'>
-                                <div className="p-1 flex justify-center items-center h-full">
-                                    <Card className='flex justify-between items-center flex-col bg-background rounded-apple text-white shadow-md'>
-                                        <CardHeader className='w-full'>
-                                            <CardTitle className="text-blue-100 font-bold">{item.date}</CardTitle>
-                                            <CardDescription className="text-white text-md">{item.label}</CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-white font-semibold text-sm">{item.description}</p>
-                                        </CardContent>
-                                        <CardFooter>
-                                            <div className="flex justify-start items-center flex-wrap gap-1 w-full">
-                                                {item.skills && item.skills.map((skill, index) => {
-                                                    return (
-                                                        <Badge key={index} variant="outline">{skill}</Badge>
-                                                    )
-                                                })}
-                                            </div>
-                                        </CardFooter>
-                                    </Card>
-                                </div>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className='cursor-pointer bg-white hidden lg:flex' />
-                    <CarouselNext className='cursor-pointer bg-white hidden lg:flex' />
-                </Carousel>
-            </div>
+            {useIsMobile() ? (
+                <>
+                    <MobileEducations title='Education' data={education}/>
+                    <MobileEducations title='Experiences' data={experiences}/>
+                </>
+            ) : (
+                <>
+                    <DesktopEducation title='Education' data={education}/>
+                    <DesktopEducation title='Experiences' data={experiences}/>
+                </>
+            )}
 
         </div>
     )
