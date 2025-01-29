@@ -19,9 +19,9 @@ export default function EducationPage() {
     ]
 
     return (
-        <div className="grid lg:grid-cols-2 justify-center w-full h-screen animate-pageSpawn overflow-auto overflow-x-hidden p-10 gap-2">
+        <div className="grid lg:grid-cols-2 justify-center w-full h-full animate-pageSpawn overflow-auto overflow-x-hidden p-10 gap-4 sm:p-10">
 
-            <div className="flex justify-center items-center flex-col gap-3">
+            <div className="flex justify-start items-center flex-col gap-3 h-full w-full">
                 <h1 className="text-white font-semibold text-3xl">Education</h1>
                 <Separator className="w-2/3"/>
 
@@ -52,12 +52,12 @@ export default function EducationPage() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className='cursor-pointer bg-white' />
-                    <CarouselNext className='cursor-pointer bg-white' />
+                    <CarouselPrevious className='cursor-pointer bg-white hidden lg:flex' />
+                    <CarouselNext className='cursor-pointer bg-white hidden lg:flex' />
                 </Carousel>
             </div>
 
-            <div className="flex justify-center items-center flex-col gap-3">
+            <div className="flex justify-start items-center flex-col gap-3 h-full w-full">
                 <h1 className="text-white font-semibold text-3xl">Experiences</h1>
                 <Separator className="w-2/3"/>
 
@@ -88,8 +88,8 @@ export default function EducationPage() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className='cursor-pointer bg-white' />
-                    <CarouselNext className='cursor-pointer bg-white' />
+                    <CarouselPrevious className='cursor-pointer bg-white hidden lg:flex' />
+                    <CarouselNext className='cursor-pointer bg-white hidden lg:flex' />
                 </Carousel>
             </div>
 
