@@ -19,7 +19,7 @@ export default function EducationPage() {
     ]
 
     return (
-        <div className="grid lg:grid-cols-2 justify-center w-full h-full animate-pageSpawn overflow-auto overflow-x-hidden p-5 gap-4 sm:p-10">
+        <div className="grid lg:grid-cols-2 justify-center w-full h-full animate-pageSpawn overflow-auto overflow-x-hidden p-5 gap-4 sm:p-10 min-w-screen">
 
             <div className="flex justify-start items-center flex-col gap-3 h-full w-full">
                 <h1 className="text-white font-semibold text-3xl">Education</h1>
