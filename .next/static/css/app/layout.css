@@ -683,6 +683,12 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-1 {
+  min-height: 0.25rem;
+}
+.min-h-\[calc\(100vh-4rem\)\] {
+  min-height: calc(100vh - 4rem);
+}
 .w-1\/2 {
   width: 50%;
 }
@@ -1000,6 +1006,9 @@ video {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .px-2\.5 {
   padding-left: 0.625rem;

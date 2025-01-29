@@ -26,7 +26,7 @@ export default function Home() {
                 />
             </div>
 
-            <div className="relative z-10 flex justify-center items-center flex-col sm:flex-col lg:flex-row gap-6 h-screen w-full duration-300">
+            <div className="relative z-10 flex justify-center items-center flex-col sm:flex-col lg:flex-row gap-6 h-screen w-full duration-300 overflow-hidden">
                 
                 <TabBar tabOpen={tabOpen} tabActive={tabActive} setTabActive={setTabActive} setTabOpen={setTabOpen} sideBar={sideBar}/>
                 
